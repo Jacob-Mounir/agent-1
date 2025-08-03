@@ -63,12 +63,13 @@ const projects = [
   },
   {
     id: 6,
-    title: "Fortum",
+    title: "Powering a thriving world",
     client: "Fortum",
     category: "Location Scout",
     productionCompany: "Aspekt",
     image: "/lovable-uploads/703d86ba-4335-4280-8fcc-fd4572e410cd.png",
-    description: "Energy company commercial production"
+    description: "Energy company commercial production",
+    link: "https://aspekt.com/projects/fortum-powering-a-thriving-world/"
   }
 ];
 
