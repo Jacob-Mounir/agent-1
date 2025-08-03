@@ -72,33 +72,6 @@ const ClientsSection = () => {
           </motion.p>
         </motion.div>
 
-        {/* Testimonials */}
-        <div className="grid lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="glass p-8 relative"
-            >
-              <div className="mb-6">
-                <div className="w-8 h-px bg-primary mb-6" />
-                <blockquote className="font-playfair text-lg italic text-foreground leading-relaxed">
-                  "{testimonial.quote}"
-                </blockquote>
-              </div>
-              
-              <div className="text-sm">
-                <cite className="text-muted-foreground not-italic">
-                  {testimonial.author}
-                </cite>
-                <div className="text-primary font-medium">{testimonial.company}</div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );

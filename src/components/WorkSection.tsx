@@ -99,6 +99,7 @@ const WorkSection = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group cursor-pointer"
+              onClick={() => project.link && window.open(project.link, '_blank')}
             >
               <div className="relative overflow-hidden rounded-lg glass glass-hover">
                 <img
