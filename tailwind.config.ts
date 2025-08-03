@@ -19,8 +19,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Geist', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
+        inter: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -29,9 +30,13 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#4ADE80",
+          DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        "luxury-gold": "hsl(var(--luxury-gold))",
+        "nordic-blue": "hsl(var(--nordic-blue))",
+        "warm-gray": "hsl(var(--warm-gray))",
+        "elegant-border": "hsl(var(--elegant-border))",
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -58,13 +63,45 @@ export default {
         },
       },
       keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' }
+        fadeInUp: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(2rem)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          }
+        },
+        fadeInScale: {
+          '0%': {
+            opacity: '0',
+            transform: 'scale(0.95)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'scale(1)'
+          }
+        },
+        parallax: {
+          '0%': { transform: 'translateY(0px)' },
+          '100%': { transform: 'translateY(-50px)' }
         }
       },
       animation: {
-        marquee: 'marquee 40s linear infinite'
+        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+        'fade-in-scale': 'fadeInScale 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+        'parallax': 'parallax 1s ease-out forwards'
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '112': '28rem',
+        '128': '32rem'
+      },
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem'
       }
     },
   },
