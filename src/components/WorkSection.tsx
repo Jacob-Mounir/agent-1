@@ -23,8 +23,8 @@ const projects = [
   },
   {
     id: 2,
-    title: "M – Lyftet",
-    client: "M campaign (Acne Film)",
+    title: "Volvo - Lyftet",
+    client: "Volvo OnDemand",
     category: "Location Scout & Manager",
     productionCompany: "Acne Film",
     image: "/lovable-uploads/99f50dcb-88c5-4599-a8ad-c9aa77d0f55e.png",
@@ -49,7 +49,7 @@ const projects = [
     category: "Location Manager & Scout",
     productionCompany: "Viaplay Original",
     image: "/lovable-uploads/ec0d060f-ccce-4289-bf36-a5639cef1670.png",
-    description: "Cannes Series Award winner set in Jordnära community",
+    description: "Cannes Series Award winner",
     link: "https://www.youtube.com/watch?v=RtXsJKotJb4"
   },
   {
@@ -57,7 +57,6 @@ const projects = [
     title: "IKEA – One Little Thing",
     client: "IKEA",
     category: "Location Scout & Manager",
-    productionCompany: "Soft Citizen",
     image: "/lovable-uploads/3d12b0aa-570b-4f60-9368-0a1105adc033.png",
     description: "Furniture brand storytelling campaign",
     link: "https://vimeo.com/466084328"
