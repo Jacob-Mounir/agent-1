@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { ExternalLink, ArrowUpRight } from "lucide-react";
+import { ExternalLink, ArrowUpRight, X, Play } from "lucide-react";
 import { Button } from "./ui/button";
+import { useState } from "react";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -60,10 +61,40 @@ const projects = [
     image: "/lovable-uploads/3d12b0aa-570b-4f60-9368-0a1105adc033.png",
     description: "Furniture brand storytelling campaign",
     link: "https://vimeo.com/466084328"
+  },
+  {
+    id: 6,
+    title: "Fortum",
+    client: "Fortum",
+    category: "Location Scout",
+    productionCompany: "Aspekt",
+    image: "/lovable-uploads/703d86ba-4335-4280-8fcc-fd4572e410cd.png",
+    description: "Energy company commercial production"
   }
 ];
 
 const WorkSection = () => {
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
+  const getEmbedUrl = (url: string) => {
+    if (url.includes('youtube.com/watch?v=')) {
+      const videoId = url.split('v=')[1].split('&')[0];
+      return `https://www.youtube.com/embed/${videoId}`;
+    } else if (url.includes('vimeo.com/')) {
+      const videoId = url.split('vimeo.com/')[1];
+      return `https://player.vimeo.com/video/${videoId}`;
+    }
+    return url;
+  };
+
+  const openVideo = (link: string) => {
+    setSelectedVideo(getEmbedUrl(link));
+  };
+
+  const closeVideo = () => {
+    setSelectedVideo(null);
+  };
+
   return (
     <section id="work" className="py-32 bg-black relative overflow-hidden">
       <div className="absolute inset-0 bg-noise" />
@@ -94,7 +125,7 @@ const WorkSection = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group cursor-pointer"
-              onClick={() => project.link && window.open(project.link, '_blank')}
+              onClick={() => project.link && openVideo(project.link)}
             >
               <div className="relative overflow-hidden rounded-lg glass glass-hover">
                 <img
@@ -141,6 +172,27 @@ const WorkSection = () => {
           </Button>
         </motion.div>
       </div>
+
+      {/* Video Modal */}
+      {selectedVideo && (
+        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+          <div className="relative w-full max-w-4xl aspect-video">
+            <button
+              onClick={closeVideo}
+              className="absolute -top-12 right-0 text-white hover:text-primary transition-colors z-10"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <iframe
+              src={selectedVideo}
+              className="w-full h-full rounded-lg"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
