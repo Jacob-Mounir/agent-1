@@ -11,6 +11,15 @@ import project6 from "@/assets/project-6.jpg";
 const projects = [
   {
     id: 1,
+    title: "Bang & Olufsen",
+    client: "Camp David Films",
+    category: "Location Scout & Manager",
+    image: "/lovable-uploads/7c014f66-34ce-400b-9d89-084c78d3d2d9.png",
+    description: "Premium audio brand commercial production",
+    link: "https://www.youtube.com/watch?v=-ecSYXkRf6M"
+  },
+  {
+    id: 2,
     title: "Modern Villa",
     client: "Viaplay Original",
     category: "Location Scouting",
@@ -18,7 +27,7 @@ const projects = [
     description: "Architectural elegance meets Nordic minimalism"
   },
   {
-    id: 2,
+    id: 3,
     title: "Coastal Drama",
     client: "HBO Nordic",
     category: "Production Management",
@@ -26,7 +35,7 @@ const projects = [
     description: "Dramatic landscapes for premium storytelling"
   },
   {
-    id: 3,
+    id: 4,
     title: "Urban Night",
     client: "Acne Studios",
     category: "Commercial Locations",
@@ -34,7 +43,7 @@ const projects = [
     description: "Stockholm's brutalist beauty after dark"
   },
   {
-    id: 4,
+    id: 5,
     title: "Winter Retreat",
     client: "SVT Drama",
     category: "Location Scouting",
@@ -42,7 +51,7 @@ const projects = [
     description: "Remote cabin for intimate character study"
   },
   {
-    id: 5,
+    id: 6,
     title: "Industrial Space",
     client: "Partisan Films",
     category: "Studio Management",
@@ -50,7 +59,7 @@ const projects = [
     description: "Gothenburg warehouse transformed"
   },
   {
-    id: 6,
+    id: 7,
     title: "Archipelago Luxury",
     client: "International Feature",
     category: "Logistics Coordination",
