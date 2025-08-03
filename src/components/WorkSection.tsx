@@ -12,59 +12,54 @@ const projects = [
   {
     id: 1,
     title: "Bang & Olufsen",
-    client: "Camp David Films",
+    subtitle: "Crafting Memories Since 1925",
+    client: "Bang & Olufsen",
     category: "Location Scout & Manager",
-    image: "/lovable-uploads/7c014f66-34ce-400b-9d89-084c78d3d2d9.png",
+    productionCompany: "Camp David Films",
+    image: "/lovable-uploads/7af24777-7440-42d6-a930-0cc91efc3b33.png",
     description: "Premium audio brand commercial production",
     link: "https://www.youtube.com/watch?v=-ecSYXkRf6M"
   },
   {
     id: 2,
-    title: "Modern Villa",
-    client: "Viaplay Original",
-    category: "Location Scouting",
-    image: project1,
-    description: "Architectural elegance meets Nordic minimalism"
+    title: "M – Lyftet",
+    client: "M campaign (Acne Film)",
+    category: "Location Scout & Manager",
+    productionCompany: "Acne Film",
+    image: "/lovable-uploads/99f50dcb-88c5-4599-a8ad-c9aa77d0f55e.png",
+    description: "Urban nighttime commercial production",
+    link: "https://vimeo.com/492512620"
   },
   {
     id: 3,
-    title: "Coastal Drama",
-    client: "HBO Nordic",
-    category: "Production Management",
-    image: project2,
-    description: "Dramatic landscapes for premium storytelling"
+    title: "Försvarsmakten",
+    client: "Swedish Armed Forces (Försvarsmakten)",
+    category: "Production Manager & Location Scout",
+    productionCompany: "Camp David Film",
+    image: "/lovable-uploads/0b909d00-b701-4add-ab29-e01d3111d53e.png",
+    description: "Military recruitment campaign",
+    link: "https://www.youtube.com/watch?v=H9Zuji5tQA4"
   },
   {
     id: 4,
-    title: "Urban Night",
-    client: "Acne Studios",
-    category: "Commercial Locations",
-    image: project3,
-    description: "Stockholm's brutalist beauty after dark"
+    title: "Partisan",
+    subtitle: "Award Winning",
+    client: "Warner Bros. International",
+    category: "Location Manager & Scout",
+    productionCompany: "Viaplay Original",
+    image: "/lovable-uploads/ec0d060f-ccce-4289-bf36-a5639cef1670.png",
+    description: "Cannes Series Award winner set in Jordnära community",
+    link: "https://www.youtube.com/watch?v=RtXsJKotJb4"
   },
   {
     id: 5,
-    title: "Winter Retreat",
-    client: "SVT Drama",
-    category: "Location Scouting",
-    image: project4,
-    description: "Remote cabin for intimate character study"
-  },
-  {
-    id: 6,
-    title: "Industrial Space",
-    client: "Partisan Films",
-    category: "Studio Management",
-    image: project5,
-    description: "Gothenburg warehouse transformed"
-  },
-  {
-    id: 7,
-    title: "Archipelago Luxury",
-    client: "International Feature",
-    category: "Logistics Coordination",
-    image: project6,
-    description: "Swedish islands for high-end production"
+    title: "IKEA – One Little Thing",
+    client: "IKEA",
+    category: "Location Scout & Manager",
+    productionCompany: "Soft Citizen",
+    image: "/lovable-uploads/3d12b0aa-570b-4f60-9368-0a1105adc033.png",
+    description: "Furniture brand storytelling campaign",
+    link: "https://vimeo.com/466084328"
   }
 ];
 
