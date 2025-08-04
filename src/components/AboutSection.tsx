@@ -19,10 +19,10 @@ const AboutSection = () => {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-heading mb-6">
+              <h1 className="text-heading mb-6">
                 Location Management —{" "}
                 <span className="text-gradient">Rooted in the Nordics.</span>
-              </h2>
+              </h1>
               
               <div className="space-y-6 text-body text-muted-foreground">
                 <p>

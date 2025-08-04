@@ -130,7 +130,7 @@ const WorkSection = () => {
               <div className="relative overflow-hidden rounded-lg glass glass-hover">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} - Location scouting and film production services for ${project.client} in Sweden`}
                   className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 

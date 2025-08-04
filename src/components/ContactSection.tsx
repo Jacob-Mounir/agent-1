@@ -102,7 +102,7 @@ const ContactSection = () => {
             <div>
               <h2 className="text-heading mb-6">
                 Let's find your{" "}
-                <span className="text-gradient">next location.</span>
+                <span className="text-gradient">perfect location.</span>
               </h2>
               
               <p className="text-subheading text-muted-foreground mb-8 leading-relaxed">
