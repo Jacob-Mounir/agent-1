@@ -34,7 +34,8 @@ const InstagramGrid = () => {
         const data = await response.json();
         setPosts(data.data || []);
       } catch (error) {
-        console.error('Error fetching Instagram posts:', error);
+        // Log minimal error information
+        console.error('Instagram feed error');
         toast({
           title: "Instagram Feed Unavailable",
           description: "Unable to load Instagram posts at the moment.",
