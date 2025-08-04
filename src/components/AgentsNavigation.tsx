@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Camera, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
@@ -43,7 +43,6 @@ const AgentsNavigation = () => {
       <div className="mx-auto h-full px-8">
         <nav className="flex items-center justify-between h-full">
           <div className="flex items-center gap-3">
-            <Camera className="w-6 h-6 text-primary" />
             <span className="font-playfair text-xl font-medium">Agents & Scouts</span>
           </div>
 

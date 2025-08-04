@@ -65,8 +65,8 @@ const AboutSection = () => {
           >
             <div className="glass overflow-hidden rounded-lg">
               <img
-                src={aboutBackground}
-                alt="Film crew preparing at a remote Nordic location"
+                src="/lovable-uploads/b83b221d-eb46-4bc5-bb38-34c4da7c51a2.png"
+                alt="Professional film studio with crew and equipment"
                 className="w-full h-[600px] object-cover"
               />
             </div>
