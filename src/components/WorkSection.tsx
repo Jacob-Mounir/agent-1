@@ -11,6 +11,16 @@ import project6 from "@/assets/project-6.jpg";
 
 const projects = [
   {
+    id: 0,
+    title: "Salvatore Ganacci - Step-Grandma",
+    client: "Salvatore Ganacci",
+    category: "Location Scout & Manager",
+    productionCompany: "Business Club Royale",
+    image: "/lovable-uploads/e09ec964-e9ed-4a44-bb3e-02cc6a1a71fe.png",
+    description: "Music video production in forest locations",
+    link: "https://www.youtube.com/watch?v=StYkb5kbM3o"
+  },
+  {
     id: 1,
     title: "Bang & Olufsen",
     subtitle: "Crafting Memories Since 1925",
