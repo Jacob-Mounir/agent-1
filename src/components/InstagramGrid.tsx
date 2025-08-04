@@ -20,7 +20,7 @@ const InstagramGrid = () => {
   useEffect(() => {
     const fetchInstagramPosts = async () => {
       try {
-        const response = await fetch('/api/instagram-feed', {
+        const response = await fetch('/functions/v1/instagram-feed', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
