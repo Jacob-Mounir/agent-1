@@ -39,7 +39,7 @@ const HeroSection = () => {
             className="mb-6"
           >
             <span className="text-caption text-muted-foreground mb-4 block">
-              Scandinavian Locations • Modern Management • Trusted film fixer
+              LOCATION SERVICE • PRODUCTION SERVICE • STOCKHOLM GOTHENBURG & BEYOND
             </span>
           </motion.div>
 
@@ -49,9 +49,9 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-hero mb-8"
           >
-            <span className="text-muted-foreground font-light">Premium Location Scouting & Film Production Services in</span>
+            <span className="text-muted-foreground font-light">Where Cinematic Vision</span>
             <br />
-            <span className="text-primary font-medium">Stockholm, Gothenburg & Scandinavia.</span>
+            <span className="text-primary font-medium">Meets Scandinavian Precision.</span>
           </motion.h1>
 
           <motion.p
