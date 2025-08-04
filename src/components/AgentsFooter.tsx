@@ -76,7 +76,7 @@ const AgentsFooter = () => {
                 </a>
               </li>
               <li>
-                <a href="tel:+46812345678" className="link-elegant text-sm text-muted-foreground hover:text-primary">
+                <a href="tel:+46700000081" className="link-elegant text-sm text-muted-foreground hover:text-primary">
                   +46 7 000 000 81
                 </a>
               </li>
