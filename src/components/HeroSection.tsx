@@ -49,9 +49,9 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-hero mb-8"
           >
-            <span className="text-muted-foreground font-light">Where Cinematic Vision</span>
+            <span className="text-muted-foreground font-light">From Permits to Production,</span>
             <br />
-            <span className="text-primary font-medium">Meets Scandinavian Precision.</span>
+            <span className="text-primary font-medium">We Keep You Rolling!</span>
           </motion.h1>
 
           <motion.p
