@@ -32,6 +32,16 @@ const projects = [
     link: "https://www.youtube.com/watch?v=qEGGv4Metb8"
   },
   {
+    id: 2.5,
+    title: "Ring Mamma!",
+    client: "SVT",
+    category: "Location Scout & Manager",
+    productionCompany: "Garage Film",
+    image: "/lovable-uploads/9de7aca9-5677-4465-b259-4a41a12dc2d4.png",
+    description: "Swedish comedy series production",
+    link: "https://www.svtplay.se/video/eXY7kxq/ring-mamma"
+  },
+  {
     id: 1,
     title: "Bang & Olufsen",
     subtitle: "Crafting Memories Since 1925",
