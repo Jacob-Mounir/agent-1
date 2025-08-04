@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 
 const clients = [
-  "HBO Nordic",
   "Viaplay",
   "Mascot",
   "Holocene Studios",
-  "BRL",
   "Acne Film", 
   "Bigster",
   "Camp David Film",
