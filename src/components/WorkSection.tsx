@@ -166,7 +166,7 @@ const WorkSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <Button className="button-ghost">
+          <Button className="button-luxury">
             <ExternalLink className="w-4 h-4 mr-2" />
             View All Projects
           </Button>
