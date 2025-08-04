@@ -4,13 +4,8 @@ import { Button } from "./ui/button";
 
 const ServiceGuideSection = () => {
   const handleDownload = () => {
-    // Create a temporary PDF content
-    const link = document.createElement('a');
-    link.href = '/service-guide.pdf';
-    link.download = 'Agents-Scouts-Service-Guide.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Open Dropbox link for direct download
+    window.open('https://www.dropbox.com/scl/fi/shz4yj3fenkq7cu9kpwv0/Agents-Scouts-Service-Location-Management-Guide.pdf?rlkey=1d3ny4i1nazjfouatq1278i33&st=o005eidl&dl=1', '_blank');
   };
 
   return (
