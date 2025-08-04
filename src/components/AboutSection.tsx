@@ -20,7 +20,7 @@ const AboutSection = () => {
           >
             <div>
               <h2 className="text-heading mb-6">
-                Luxury Location Management —{" "}
+                Location Management —{" "}
                 <span className="text-gradient">Rooted in the Nordics.</span>
               </h2>
               
@@ -50,7 +50,7 @@ const AboutSection = () => {
                 "They made it effortless — calm, capable, connected."
               </blockquote>
               <cite className="text-caption text-muted-foreground mt-4 block not-italic">
-                Producer, Premium Production House
+                Producer
               </cite>
             </motion.div>
           </motion.div>
