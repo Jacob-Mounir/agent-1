@@ -70,11 +70,92 @@ const projects = [
     image: "/lovable-uploads/703d86ba-4335-4280-8fcc-fd4572e410cd.png",
     description: "Energy company commercial production",
     link: "https://aspekt.com/projects/fortum-powering-a-thriving-world/"
+  },
+  {
+    id: 7,
+    title: "Tech Innovation Hub",
+    client: "Nordic Tech Solutions",
+    category: "Location Scout & Manager",
+    productionCompany: "Digital Focus",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+    description: "Modern technology workspace commercial",
+    link: "#"
+  },
+  {
+    id: 8,
+    title: "Code Masters",
+    client: "Software Development Corp",
+    category: "Production Manager",
+    productionCompany: "Tech Films",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&q=80",
+    description: "Software development documentary series",
+    link: "#"
+  },
+  {
+    id: 9,
+    title: "Digital Workspace",
+    client: "Creative Studios AB",
+    category: "Location Scout",
+    productionCompany: "Modern Productions",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+    description: "Creative workspace brand campaign",
+    link: "#"
+  },
+  {
+    id: 10,
+    title: "Office Evolution",
+    client: "Business Solutions Ltd",
+    category: "Location Manager",
+    productionCompany: "Corporate Films",
+    image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=800&q=80",
+    description: "Modern office environment showcase",
+    link: "#"
+  },
+  {
+    id: 11,
+    title: "Nordic Forest Dreams",
+    client: "Scandinavian Tourism Board",
+    category: "Location Scout & Manager",
+    productionCompany: "Nature Films",
+    image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=800&q=80",
+    description: "Tourism campaign in Swedish forests",
+    link: "#"
+  },
+  {
+    id: 12,
+    title: "Golden Hour Magic",
+    client: "Outdoor Adventures Co",
+    category: "Location Scout",
+    productionCompany: "Adventure Productions",
+    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=800&q=80",
+    description: "Outdoor adventure series production",
+    link: "#"
+  },
+  {
+    id: 13,
+    title: "Lakeside Serenity",
+    client: "Wellness Retreats Sweden",
+    category: "Production Manager & Scout",
+    productionCompany: "Tranquil Films",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
+    description: "Wellness and mindfulness campaign",
+    link: "#"
+  },
+  {
+    id: 14,
+    title: "Midnight Sun",
+    client: "Arctic Expeditions",
+    category: "Location Manager",
+    productionCompany: "Arctic Productions",
+    image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=800&q=80",
+    description: "Arctic adventure documentary",
+    link: "#"
   }
 ];
 
 const WorkSection = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   const getEmbedUrl = (url: string) => {
     if (url.includes('youtube.com/watch?v=')) {
@@ -94,6 +175,12 @@ const WorkSection = () => {
   const closeVideo = () => {
     setSelectedVideo(null);
   };
+
+  const toggleProjects = () => {
+    setShowAllProjects(!showAllProjects);
+  };
+
+  const displayedProjects = showAllProjects ? projects : projects.slice(0, 6);
 
   return (
     <section id="work" className="py-32 bg-black relative overflow-hidden">
@@ -117,7 +204,7 @@ const WorkSection = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
@@ -166,9 +253,9 @@ const WorkSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <Button className="button-luxury">
+          <Button className="button-luxury" onClick={toggleProjects}>
             <ExternalLink className="w-4 h-4 mr-2" />
-            View All Projects
+            {showAllProjects ? 'Show Less' : 'View All Projects'}
           </Button>
         </motion.div>
       </div>
