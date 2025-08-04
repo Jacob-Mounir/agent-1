@@ -39,7 +39,7 @@ const HeroSection = () => {
             className="mb-6"
           >
             <span className="text-caption text-muted-foreground mb-4 block">
-              Scandinavian luxury • Modern minimalism • Trusted film fixer
+              Scandinavian Locations • Modern Management • Trusted film fixer
             </span>
           </motion.div>
 
