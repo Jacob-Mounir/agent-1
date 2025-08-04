@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 const clients = [
   "HBO Nordic",
   "Viaplay",
-  "SVT",
-  "Acne Studios", 
-  "Partisan Films",
-  "A24",
-  "NENT Studios",
-  "Zentropa"
+  "Mascot",
+  "Holocene Studios",
+  "BRL",
+  "Acne Film", 
+  "Bigster",
+  "Camp David Film",
+  "XO Studios",
+  "BUSINESS CLUB ROYALE"
 ];
 
 const testimonials = [
