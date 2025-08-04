@@ -21,6 +21,17 @@ const projects = [
     link: "https://www.youtube.com/watch?v=StYkb5kbM3o"
   },
   {
+    id: 1.5,
+    title: "Veronika",
+    subtitle: "Sky Showtime Original Series",
+    client: "Sky Showtime",
+    category: "Location Manager",
+    productionCompany: "Bigster",
+    image: "/lovable-uploads/556b5794-0322-46c8-add1-d5ad604dfae2.png",
+    description: "Original series production with natural water locations",
+    link: "https://www.youtube.com/watch?v=qEGGv4Metb8"
+  },
+  {
     id: 1,
     title: "Bang & Olufsen",
     subtitle: "Crafting Memories Since 1925",
