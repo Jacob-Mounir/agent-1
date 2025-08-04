@@ -49,7 +49,7 @@ const ServiceGuideSection = () => {
               </Button>
               
               <p className="text-caption text-muted-foreground">
-                PDF • 2.5 MB • Updated 2024
+                PDF • 1.1 MB • Updated 2025
               </p>
             </div>
           </div>
