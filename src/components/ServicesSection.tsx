@@ -116,7 +116,12 @@ const ServicesSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="button-luxury">Discuss Your Project</button>
-              <button className="button-ghost">Download Services Guide</button>
+              <button 
+                className="button-ghost"
+                onClick={() => window.open('https://www.dropbox.com/scl/fi/noqfeqct6zsdlrb4fpz42/Agents-Scouts-Service-Location-Management-Guide.pdf?rlkey=69vfzwz6425ghxnh0xjchxvof&dl=1', '_blank')}
+              >
+                Download Services Guide
+              </button>
             </div>
           </div>
         </motion.div>
