@@ -21,16 +21,6 @@ const projects = [
     link: "https://youtu.be/2Kjy5r6wS6w"
   },
   {
-    id: 0.3,
-    title: "Volvo - Wellbeing",
-    client: "Volvo",
-    category: "Location Scout / Location Manager",
-    productionCompany: "Camp David Film",
-    image: "/lovable-uploads/6f60dac8-7622-49b3-ab82-cadb78775346.png",
-    description: "Commercial production focusing on wellbeing and lifestyle",
-    link: "https://www.campdavidfilm.com/projects/wellbeing/"
-  },
-  {
     id: 0.5,
     title: "Salvatore Ganacci - Step-Grandma",
     client: "Salvatore Ganacci",
@@ -98,7 +88,7 @@ const projects = [
     subtitle: "Award Winning",
     client: "Warner Bros. International",
     category: "Location Manager & Scout",
-    productionCompany: "Viaplay Original",
+    productionCompany: "Warner Bros. Original",
     image: "/lovable-uploads/ec0d060f-ccce-4289-bf36-a5639cef1670.png",
     description: "Cannes Series Award winner",
     link: "https://www.youtube.com/watch?v=RtXsJKotJb4"
