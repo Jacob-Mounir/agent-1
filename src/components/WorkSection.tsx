@@ -118,7 +118,7 @@ const projects = [
     client: "Maria Nilsdotter",
     category: "Location Scout",
     productionCompany: "New Land",
-    image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=800&h=600&fit=crop",
+    image: "/lovable-uploads/5c03cb64-1c4e-4e17-8dc6-f4292d29f1f9.png",
     description: "Swedish fairytale production",
     link: "https://player.vimeo.com/video/452291668?h=1929ea03c9"
   },
