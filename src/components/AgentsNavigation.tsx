@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Link, useLocation } from "react-router-dom";
 
 const AgentsNavigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +19,12 @@ const AgentsNavigation = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    // If not on home page, navigate to home first
+    if (location.pathname !== '/') {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+    
     const element = document.getElementById(sectionId);
     if (element) {
       const yOffset = -100;
@@ -42,9 +50,9 @@ const AgentsNavigation = () => {
     >
       <div className="mx-auto h-full px-8">
         <nav className="flex items-center justify-between h-full">
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <span className="font-playfair text-xl font-medium">Agents & Scouts</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

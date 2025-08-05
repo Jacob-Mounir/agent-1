@@ -1,5 +1,6 @@
 import { Instagram, Mail } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const AgentsFooter = () => {
   return (
@@ -95,12 +96,12 @@ const AgentsFooter = () => {
             © {new Date().getFullYear()} Agents & Scouts. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="/privacy-policy" className="link-elegant text-sm text-muted-foreground hover:text-primary">
+            <Link to="/privacy-policy" className="link-elegant text-sm text-muted-foreground hover:text-primary">
               Privacy Policy
-            </a>
-            <a href="/terms-of-service" className="link-elegant text-sm text-muted-foreground hover:text-primary">
+            </Link>
+            <Link to="/terms-of-service" className="link-elegant text-sm text-muted-foreground hover:text-primary">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>
