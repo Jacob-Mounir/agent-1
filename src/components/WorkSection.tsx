@@ -26,7 +26,7 @@ const projects = [
     client: "Volvo",
     category: "Location Scout / Location Manager",
     productionCompany: "Camp David Film",
-    image: "/lovable-uploads/bf56a0c6-48e4-49f7-b286-8e3fda9a3385.png",
+    image: "/lovable-uploads/6f60dac8-7622-49b3-ab82-cadb78775346.png",
     description: "Commercial production focusing on wellbeing and lifestyle",
     link: "https://www.campdavidfilm.com/projects/wellbeing/"
   },
