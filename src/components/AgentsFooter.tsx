@@ -1,4 +1,4 @@
-import { Camera, Instagram, Linkedin, Mail } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 
 const AgentsFooter = () => {
@@ -11,7 +11,6 @@ const AgentsFooter = () => {
           {/* Brand */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center gap-3">
-              <Camera className="w-6 h-6 text-primary" />
               <span className="font-playfair text-xl font-medium">Agents & Scouts</span>
             </div>
             
@@ -21,13 +20,20 @@ const AgentsFooter = () => {
             </p>
             
             <div className="flex gap-4">
-              <Button variant="ghost" size="icon" className="hover:bg-primary/10">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:bg-primary/10"
+                onClick={() => window.open('https://instagram.com/agentsandscouts', '_blank')}
+              >
                 <Instagram className="w-4 h-4" />
               </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary/10">
-                <Linkedin className="w-4 h-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary/10">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:bg-primary/10"
+                onClick={() => window.open('mailto:hello@agentsandscouts.com', '_blank')}
+              >
                 <Mail className="w-4 h-4" />
               </Button>
             </div>
