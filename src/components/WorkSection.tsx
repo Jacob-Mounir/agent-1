@@ -120,7 +120,7 @@ const projects = [
     productionCompany: "New Land",
     image: "/lovable-uploads/9cdd1194-7c9c-4db1-9854-76c89237d73c.png",
     description: "Swedish fairytale production",
-    link: "https://vimeo.com/groups/776935/videos/452291668"
+    link: "https://player.vimeo.com/video/452291668?h=1929ea03c9"
   },
   {
     id: 8,
