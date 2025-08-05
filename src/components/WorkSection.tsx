@@ -12,6 +12,16 @@ import project6 from "@/assets/project-6.jpg";
 const projects = [
   {
     id: 0,
+    title: "Yung Lean - Outta My Head",
+    client: "Yung Lean",
+    category: "Location / Props",
+    productionCompany: "Smooth Operations",
+    image: "/lovable-uploads/1d57b1e2-f313-422f-97a7-77fdfbfabd39.png",
+    description: "Music video production with atmospheric lighting and props",
+    link: "https://youtu.be/2Kjy5r6wS6w"
+  },
+  {
+    id: 0.5,
     title: "Salvatore Ganacci - Step-Grandma",
     client: "Salvatore Ganacci",
     category: "Location Scout & Manager",
