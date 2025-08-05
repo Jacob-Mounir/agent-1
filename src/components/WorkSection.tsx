@@ -53,9 +53,9 @@ const projects = [
   },
   {
     id: 1,
-    title: "Bafting Memories Since 1925",
-    subtitle: "Crafting Memories Since 1925",
-    client: "Bang & Olufsen",
+    title: "Bang & Olufsen",
+    subtitle: "Bang & Olufsen",
+    client: "Crafting Memories Since 1925",
     category: "Location Scout & Manager",
     productionCompany: "Camp David Films",
     image: "/lovable-uploads/7af24777-7440-42d6-a930-0cc91efc3b33.png",
