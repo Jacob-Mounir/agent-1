@@ -26,8 +26,7 @@ const Index = () => {
       
       <ServiceGuideSection />
       
-      <InstagramGrid />
-      
+      {/* <InstagramGrid /> */}
       <ContactSection />
       
       <AgentsFooter />
