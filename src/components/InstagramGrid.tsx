@@ -20,8 +20,8 @@ const InstagramGrid = () => {
   useEffect(() => {
     const fetchInstagramPosts = async () => {
       try {
-        const response = await fetch('/functions/v1/instagram-feed', {
-          method: 'POST',
+        const response = await fetch('https://ofunrwrfeqhbkowoosns.supabase.co/functions/v1/instagram-feed', {
+          method: 'GET',
           headers: {
             'Content-Type': 'application/json',
           },
