@@ -111,6 +111,16 @@ const projects = [
     image: "/lovable-uploads/703d86ba-4335-4280-8fcc-fd4572e410cd.png",
     description: "Energy company commercial production",
     link: "https://aspekt.com/projects/fortum-powering-a-thriving-world/"
+  },
+  {
+    id: 7,
+    title: "A Swedish Fairytale",
+    client: "Maria Nilsdotter",
+    category: "Location Scout",
+    productionCompany: "New Land",
+    image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=800&h=600&fit=crop",
+    description: "Swedish fairytale production",
+    link: "https://player.vimeo.com/video/452291668?h=1929ea03c9"
   }
 ];
 
