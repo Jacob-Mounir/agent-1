@@ -95,10 +95,10 @@ const AgentsFooter = () => {
             © {new Date().getFullYear()} Agents & Scouts. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="link-elegant text-sm text-muted-foreground hover:text-primary">
+            <a href="/privacy-policy" className="link-elegant text-sm text-muted-foreground hover:text-primary">
               Privacy Policy
             </a>
-            <a href="#" className="link-elegant text-sm text-muted-foreground hover:text-primary">
+            <a href="/terms-of-service" className="link-elegant text-sm text-muted-foreground hover:text-primary">
               Terms of Service
             </a>
           </div>
