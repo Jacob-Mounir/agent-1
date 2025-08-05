@@ -53,7 +53,7 @@ const projects = [
   },
   {
     id: 1,
-    title: "Bang & Olufsen",
+    title: "Bafting Memories Since 1925",
     subtitle: "Crafting Memories Since 1925",
     client: "Bang & Olufsen",
     category: "Location Scout & Manager",
@@ -88,7 +88,7 @@ const projects = [
     subtitle: "Award Winning",
     client: "Warner Bros. International",
     category: "Location Manager & Scout",
-    productionCompany: "Warner Bros. Original",
+    productionCompany: "Viaplay Original",
     image: "/lovable-uploads/ec0d060f-ccce-4289-bf36-a5639cef1670.png",
     description: "Cannes Series Award winner",
     link: "https://www.youtube.com/watch?v=RtXsJKotJb4"
