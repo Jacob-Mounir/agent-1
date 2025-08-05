@@ -121,6 +121,15 @@ const projects = [
     image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=800&h=600&fit=crop",
     description: "Swedish fairytale production",
     link: "https://player.vimeo.com/video/452291668?h=1929ea03c9"
+  },
+  {
+    id: 8,
+    title: "Where the magic happens",
+    client: "AEG",
+    category: "Location Scout Location Manager",
+    productionCompany: "New Land",
+    image: "/lovable-uploads/0890c106-4a92-42b3-ac21-88225c783bfc.png",
+    description: "Commercial kitchen production"
   }
 ];
 
