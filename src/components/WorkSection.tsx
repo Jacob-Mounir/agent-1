@@ -178,10 +178,10 @@ const WorkSection = () => {
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <span className="text-caption text-primary mb-2 block">{project.client}</span>
+                    <span className="text-caption text-primary mb-2 block">{project.productionCompany}</span>
                     <h3 className="text-xl font-playfair font-medium mb-1">{project.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-2">{project.productionCompany}</p>
-                    <p className="text-sm text-muted-foreground">{project.description}</p>
+                    <p className="text-sm text-muted-foreground mb-2">{project.client}</p>
+                    <p className="text-sm text-muted-foreground">{project.category}</p>
                   </div>
                 </div>
 
