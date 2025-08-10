@@ -199,6 +199,7 @@ const WorkSection = () => {
                   src={project.image}
                   alt={`${project.title} - Location scouting and film production services for ${project.client} in Sweden`}
                   className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy" decoding="async"
                 />
                 
                 {/* Overlay */}
@@ -252,6 +253,7 @@ const WorkSection = () => {
             </button>
             <iframe
               src={selectedVideo}
+              title="Projektvideo"
               className="w-full h-full rounded-lg"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
