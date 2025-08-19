@@ -71,10 +71,14 @@ const AgentsNavigation = () => {
                 {item.name}
               </a>
             ))}
-            <Button asChild className="button-luxury text-sm tracking-wide uppercase">
-              <a href="mailto:hello@agentsandscouts.com">
-                Let's Talk
-              </a>
+            <Button 
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = 'mailto:hello@agentsandscouts.com';
+              }}
+              className="button-luxury text-sm tracking-wide uppercase"
+            >
+              Let's Talk
             </Button>
           </div>
 
@@ -104,13 +108,15 @@ const AgentsNavigation = () => {
                       {item.name}
                     </a>
                   ))}
-                  <Button asChild className="button-luxury mt-6">
-                    <a 
-                      href="mailto:hello@agentsandscouts.com"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Let's Talk
-                    </a>
+                  <Button 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsMobileMenuOpen(false);
+                      window.location.href = 'mailto:hello@agentsandscouts.com';
+                    }}
+                    className="button-luxury mt-6"
+                  >
+                    Let's Talk
                   </Button>
                 </div>
               </SheetContent>
