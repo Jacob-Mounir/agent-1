@@ -160,10 +160,9 @@ serve(async (req) => {
       ip: clientIP,
     });
 
-    // Here you would typically:
-    // 1. Save to database
-    // 2. Send email notification
-    // 3. Add to CRM system
+    // Send email notification to hello@agentsandscouts.com
+    // TODO: Implement actual email sending functionality
+    // For now, we log the submission for the company to see
     
     return new Response(
       JSON.stringify({ 

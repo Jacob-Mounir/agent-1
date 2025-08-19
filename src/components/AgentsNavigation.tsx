@@ -72,7 +72,7 @@ const AgentsNavigation = () => {
               </a>
             ))}
             <Button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => window.open('mailto:hello@agentsandscouts.com', '_blank')}
               className="button-luxury text-sm tracking-wide uppercase"
             >
               Let's Talk
@@ -108,7 +108,7 @@ const AgentsNavigation = () => {
                   <Button 
                     onClick={() => {
                       setIsMobileMenuOpen(false);
-                      scrollToSection('contact');
+                      window.open('mailto:hello@agentsandscouts.com', '_blank');
                     }}
                     className="button-luxury mt-6"
                   >
