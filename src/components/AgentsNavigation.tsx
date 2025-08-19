@@ -71,11 +71,10 @@ const AgentsNavigation = () => {
                 {item.name}
               </a>
             ))}
-            <Button 
-              onClick={() => window.open('mailto:hello@agentsandscouts.com', '_blank')}
-              className="button-luxury text-sm tracking-wide uppercase"
-            >
-              Let's Talk
+            <Button asChild className="button-luxury text-sm tracking-wide uppercase">
+              <a href="mailto:hello@agentsandscouts.com">
+                Let's Talk
+              </a>
             </Button>
           </div>
 
@@ -105,14 +104,13 @@ const AgentsNavigation = () => {
                       {item.name}
                     </a>
                   ))}
-                  <Button 
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      window.open('mailto:hello@agentsandscouts.com', '_blank');
-                    }}
-                    className="button-luxury mt-6"
-                  >
-                    Let's Talk
+                  <Button asChild className="button-luxury mt-6">
+                    <a 
+                      href="mailto:hello@agentsandscouts.com"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Let's Talk
+                    </a>
                   </Button>
                 </div>
               </SheetContent>

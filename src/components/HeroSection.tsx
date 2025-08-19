@@ -78,12 +78,10 @@ const HeroSection = () => {
               View Portfolio
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button 
-              onClick={() => window.open('mailto:hello@agentsandscouts.com', '_blank')}
-              variant="outline" 
-              className="button-ghost"
-            >
-              Let's Talk
+            <Button asChild variant="outline" className="button-ghost">
+              <a href="mailto:hello@agentsandscouts.com">
+                Let's Talk
+              </a>
             </Button>
           </motion.div>
         </div>

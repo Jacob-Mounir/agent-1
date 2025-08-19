@@ -145,19 +145,16 @@ const ContactSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-8">
-              <Button 
-                className="button-luxury group"
-                onClick={() => window.open('mailto:hello@agentsandscouts.com', '_blank')}
-              >
-                Book Intro Call
-                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <Button asChild className="button-luxury group">
+                <a href="mailto:hello@agentsandscouts.com">
+                  Book Intro Call
+                  <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
-              <Button 
-                variant="outline" 
-                className="button-ghost"
-                onClick={() => window.open('mailto:hello@agentsandscouts.com', '_blank')}
-              >
-                Send Project Brief
+              <Button asChild variant="outline" className="button-ghost">
+                <a href="mailto:hello@agentsandscouts.com">
+                  Send Project Brief
+                </a>
               </Button>
             </div>
           </motion.div>
