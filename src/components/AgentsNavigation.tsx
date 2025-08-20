@@ -71,15 +71,12 @@ const AgentsNavigation = () => {
                 {item.name}
               </a>
             ))}
-            <Button 
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = 'mailto:hello@agentsandscouts.com';
-              }}
-              className="button-luxury text-sm tracking-wide uppercase"
+            <a 
+              href="mailto:hello@agentsandscouts.com"
+              className="button-luxury text-sm tracking-wide uppercase inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
             >
               Let's Talk
-            </Button>
+            </a>
           </div>
 
           {/* Mobile Navigation */}
@@ -108,16 +105,13 @@ const AgentsNavigation = () => {
                       {item.name}
                     </a>
                   ))}
-                  <Button 
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsMobileMenuOpen(false);
-                      window.location.href = 'mailto:hello@agentsandscouts.com';
-                    }}
-                    className="button-luxury mt-6"
+                  <a 
+                    href="mailto:hello@agentsandscouts.com"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="button-luxury mt-6 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
                   >
                     Let's Talk
-                  </Button>
+                  </a>
                 </div>
               </SheetContent>
             </Sheet>

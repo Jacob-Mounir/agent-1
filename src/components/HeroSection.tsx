@@ -78,16 +78,12 @@ const HeroSection = () => {
               View Portfolio
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button 
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = 'mailto:hello@agentsandscouts.com';
-              }}
-              variant="outline" 
-              className="button-ghost"
+            <a 
+              href="mailto:hello@agentsandscouts.com"
+              className="button-ghost inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
             >
               Let's Talk
-            </Button>
+            </a>
           </motion.div>
         </div>
       </div>
