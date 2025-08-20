@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { Resend } from "npm:resend@2.0.0";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -160,19 +161,52 @@ serve(async (req) => {
       ip: clientIP,
     });
 
-    // Send email notification to hello@agentsandscouts.com
-    // TODO: Implement actual email sending functionality
-    // For now, we log the submission for the company to see
+    // Send email notification using Resend
+    const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
     
-    return new Response(
-      JSON.stringify({ 
-        success: true, 
-        message: 'Thank you for your message. We will get back to you soon!' 
-      }),
-      { 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
-      }
-    );
+    try {
+      const emailResponse = await resend.emails.send({
+        from: "Contact Form <onboarding@resend.dev>",
+        to: ["hello@agentsandscouts.com"],
+        subject: `New ${sanitizedData.projectType} Project Inquiry from ${sanitizedData.name}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${sanitizedData.name}</p>
+          <p><strong>Company:</strong> ${sanitizedData.company}</p>
+          <p><strong>Email:</strong> ${sanitizedData.email}</p>
+          <p><strong>Project Type:</strong> ${sanitizedData.projectType}</p>
+          <p><strong>Project Details:</strong></p>
+          <p>${sanitizedData.projectDetails}</p>
+          <p><strong>Submitted:</strong> ${new Date().toISOString()}</p>
+          <p><strong>IP Address:</strong> ${clientIP}</p>
+        `,
+      });
+
+      console.log("Email sent successfully:", emailResponse);
+      
+      return new Response(
+        JSON.stringify({ 
+          success: true, 
+          message: 'Thank you for your message. We will get back to you soon!' 
+        }),
+        { 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
+      );
+    } catch (emailError) {
+      console.error("Failed to send email:", emailError);
+      
+      // Still return success to user, but log the email failure
+      return new Response(
+        JSON.stringify({ 
+          success: true, 
+          message: 'Thank you for your message. We will get back to you soon!' 
+        }),
+        { 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
+      );
+    }
 
   } catch (error) {
     console.error('Contact form error:', error);
