@@ -173,8 +173,9 @@ serve(async (req) => {
       console.log("Initializing Resend with API key...");
       const resend = new Resend(resendApiKey);
       
+      console.log("Attempting to send email...");
       const { data, error } = await resend.emails.send({
-        from: "Agents & Scouts <onboarding@resend.dev>",
+        from: "Agents & Scouts <delivered@resend.dev>",
         to: ["hello@agentsandscouts.com"],
         subject: `New ${sanitizedData.projectType} Project Inquiry from ${sanitizedData.name}`,
         html: `
