@@ -1,15 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { Resend } from "npm:resend@4.0.0";
 
-// Initialize Resend with API key validation
-const resendApiKey = Deno.env.get("RESEND_API_KEY");
-if (!resendApiKey) {
-  console.error("RESEND_API_KEY environment variable is not set");
-  throw new Error("Resend API key is required");
-}
-
-const resend = new Resend(resendApiKey);
-
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
@@ -172,6 +163,16 @@ serve(async (req) => {
 
     // Send email notification using Resend
     try {
+      // Initialize Resend inside the request handler to prevent startup crashes
+      const resendApiKey = Deno.env.get("RESEND_API_KEY");
+      if (!resendApiKey) {
+        console.error("RESEND_API_KEY environment variable is not set");
+        throw new Error("Resend API key is not configured");
+      }
+      
+      console.log("Initializing Resend with API key...");
+      const resend = new Resend(resendApiKey);
+      
       const { data, error } = await resend.emails.send({
         from: "Agents & Scouts <onboarding@resend.dev>",
         to: ["hello@agentsandscouts.com"],
