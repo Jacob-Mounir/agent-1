@@ -1,5 +1,14 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { Resend } from "npm:resend@2.0.0";
+import { Resend } from "npm:resend@4.0.0";
+
+// Initialize Resend with API key validation
+const resendApiKey = Deno.env.get("RESEND_API_KEY");
+if (!resendApiKey) {
+  console.error("RESEND_API_KEY environment variable is not set");
+  throw new Error("Resend API key is required");
+}
+
+const resend = new Resend(resendApiKey);
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -162,32 +171,57 @@ serve(async (req) => {
     });
 
     // Send email notification using Resend
-    const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-    
     try {
-      const emailResponse = await resend.emails.send({
-        from: "Contact Form <onboarding@resend.dev>",
+      const { data, error } = await resend.emails.send({
+        from: "Agents & Scouts <onboarding@resend.dev>",
         to: ["hello@agentsandscouts.com"],
         subject: `New ${sanitizedData.projectType} Project Inquiry from ${sanitizedData.name}`,
         html: `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${sanitizedData.name}</p>
-          <p><strong>Company:</strong> ${sanitizedData.company}</p>
-          <p><strong>Email:</strong> ${sanitizedData.email}</p>
-          <p><strong>Project Type:</strong> ${sanitizedData.projectType}</p>
-          <p><strong>Project Details:</strong></p>
-          <p>${sanitizedData.projectDetails}</p>
-          <p><strong>Submitted:</strong> ${new Date().toISOString()}</p>
-          <p><strong>IP Address:</strong> ${clientIP}</p>
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <title>New Contact Form Submission</title>
+            </head>
+            <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+              <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+                <h2 style="color: #2563eb; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px;">New Contact Form Submission</h2>
+                
+                <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                  <p><strong>Name:</strong> ${sanitizedData.name}</p>
+                  <p><strong>Company:</strong> ${sanitizedData.company}</p>
+                  <p><strong>Email:</strong> <a href="mailto:${sanitizedData.email}" style="color: #2563eb;">${sanitizedData.email}</a></p>
+                  <p><strong>Project Type:</strong> ${sanitizedData.projectType}</p>
+                </div>
+                
+                <div style="margin: 20px 0;">
+                  <h3>Project Details:</h3>
+                  <div style="background: white; border: 1px solid #e5e7eb; padding: 15px; border-radius: 4px;">
+                    ${sanitizedData.projectDetails.replace(/\n/g, '<br>')}
+                  </div>
+                </div>
+                
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; font-size: 12px; color: #6b7280;">
+                  <p><strong>Submitted:</strong> ${new Date().toISOString()}</p>
+                  <p><strong>IP Address:</strong> ${clientIP}</p>
+                </div>
+              </div>
+            </body>
+          </html>
         `,
       });
 
-      console.log("Email sent successfully:", emailResponse);
+      if (error) {
+        console.error("Resend API error:", error);
+        throw error;
+      }
+
+      console.log("Email sent successfully:", data);
       
       return new Response(
         JSON.stringify({ 
           success: true, 
-          message: 'Thank you for your message. We will get back to you soon!' 
+          message: 'Tack för ditt meddelande! Vi hör av oss inom kort.' 
         }),
         { 
           headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
@@ -196,13 +230,12 @@ serve(async (req) => {
     } catch (emailError) {
       console.error("Failed to send email:", emailError);
       
-      // Still return success to user, but log the email failure
       return new Response(
         JSON.stringify({ 
-          success: true, 
-          message: 'Thank you for your message. We will get back to you soon!' 
+          error: 'Det gick inte att skicka meddelandet. Försök igen eller kontakta oss direkt på hello@agentsandscouts.com' 
         }),
         { 
+          status: 500,
           headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
         }
       );
