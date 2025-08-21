@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "./ui/button";
+import SmartContactButton from "./ui/smart-contact-button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema, type ContactFormData } from "@/lib/contact-schema";
@@ -145,19 +146,20 @@ const ContactSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-8">
-              <a 
-                href="mailto:hello@agentsandscouts.com"
-                className="button-luxury group inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+              <SmartContactButton 
+                className="button-luxury group"
+                subject="Intro Call Request"
               >
                 Book Intro Call
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </a>
-              <a 
-                href="mailto:hello@agentsandscouts.com"
-                className="button-ghost inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+              </SmartContactButton>
+              <SmartContactButton 
+                className="button-ghost"
+                variant="ghost"
+                subject="Project Brief"
               >
                 Send Project Brief
-              </a>
+              </SmartContactButton>
             </div>
           </motion.div>
 
