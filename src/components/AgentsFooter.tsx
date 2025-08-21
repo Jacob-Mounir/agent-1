@@ -29,14 +29,12 @@ const AgentsFooter = () => {
               >
                 <Instagram className="w-4 h-4" />
               </Button>
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="hover:bg-primary/10"
-                onClick={() => window.open('mailto:hello@agentsandscouts.com', '_blank')}
+              <a 
+                href="mailto:hello@agentsandscouts.com"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 hover:bg-primary/10"
               >
                 <Mail className="w-4 h-4" />
-              </Button>
+              </a>
             </div>
           </div>
 
@@ -78,8 +76,8 @@ const AgentsFooter = () => {
                 Gothenburg, Sweden
               </li>
               <li>
-                <a href="mailto:hello@agentsandscouts.se" className="link-elegant text-sm text-muted-foreground hover:text-primary">
-                  hello@agentsandscouts.se
+                <a href="mailto:hello@agentsandscouts.com" className="link-elegant text-sm text-muted-foreground hover:text-primary">
+                  hello@agentsandscouts.com
                 </a>
               </li>
               <li>
